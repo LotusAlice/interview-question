@@ -12,8 +12,10 @@ import java.util.concurrent.*;
 
 /**
  * ThreadLocal：Java8 以前解决线程安全问题的方式
- * <p>
- * 测试：将"2016-12-18"解析成Date后，添加到集合并遍历（存在线程安全问题）
+ *
+ * Java8以前使用的处理日期和线程的类：java.text.SimpleDateFormat/java.util.Date 作为多线程共享变量时存在线程安全问题
+ *
+ * 测试：将"2016-12-18"解析成Date后，添加到集合并遍历
  *
  * @author lotus
  * @create 2020-12-26 20:45
